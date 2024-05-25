@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'Mcp'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree('libraries')
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'windows-1251'
+}
+
+test {
+    useJUnitPlatform()
+}
